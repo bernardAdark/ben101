@@ -35,13 +35,13 @@
 			}else if (sign == 6){
 					System.out.println("Enter First number");
 					int num1=inp.nextInt();
-					System.out.println("Enter First number");
+					System.out.println("Enter Second number");
 					int num2=inp.nextInt();
 				 exponent(num1 , num2 );
 			}else if (sign == 8){ 
 					System.out.println("Enter First number");
 					int num1 = inp.nextInt();
-					System.out.println("Enter First number");
+					System.out.println("Enter Second number");
 					int num2 = inp.nextInt();
 					average(num1 , num2 );
 				}
