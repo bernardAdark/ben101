@@ -31,7 +31,8 @@
 			}
 
 			if (sign == 7){
-				squareRoot(one);
+				int chi = (int) one;
+				squareRoot(chi);
 				
 			}
 
@@ -98,7 +99,7 @@
 		
 
 
-		public static void exponent(double one , double two){
+		public static void exponent(double one, double two){
 			double result = 1;
 			for(int i = 0 ; i< two ; i++){
 				result *= one;
@@ -106,14 +107,23 @@
 			System.out.println ("The exponent of the numbers is " + result);
 		}
 
-		public static void squareRoot(double a){
-			double result = Math.sqrt(a);
+		public static void squareRoot(int a){
+			double check;
+			double result = a / 2 ;
+
+			do{
+				check = result;
+				result = (check + ( a /check)) /2;
+
+			}
+			   while((check- result)!=0);
 
 			System.out.println(result);
 		}
 
 		public static void average(int a, int b){
-			System.out.println("The average of the numbers is " + ((a+b)/2));
+
+			System.out.println("The average of the numbers is " + ((float)a+(float)(b-a)/2));
 		}
 
 
