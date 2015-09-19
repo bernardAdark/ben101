@@ -34,10 +34,10 @@
 				
 			}else if (sign == 6){
 					System.out.println("Enter First number");
-					int num1=inp.nextInt();
+					int num1 = inp.nextInt();
 					System.out.println("Enter Second number");
-					int num2=inp.nextInt();
-				 exponent(num1 , num2 );
+					int num2 = inp.nextInt();
+					 exponent(num1 , num2 );
 			}else if (sign == 8){ 
 					System.out.println("Enter First number");
 					int num1 = inp.nextInt();
@@ -63,8 +63,6 @@
 				 divide(one , two );
 				}else if (sign == 5){ 
 					modulo(one , two );
-				}else{ 
-					System.out.println("Check the operation and try again");
 				}
 			}
 		}
@@ -72,24 +70,24 @@
 		
 		public static void add(double a, double b){
 
-			System.out.println("The sum of the numbers is " +(a+b));
+			System.out.println("The sum of the numbers is " + (a + b));
 		}
 
 
 		public static void subtract(double a, double b){
 
-			System.out.println("The difference of the numbers is " +(a-b));
+			System.out.println("The difference of the numbers is " + (a - b));
 		}
 
 		public static void modulo(double a, double b){
 
-			System.out.println("The modulo of the numbers is " +(a%b));
+			System.out.println("The modulo of the numbers is " + (a % b));
 		}
 
 
 		public static void multiply(double a, double b){
 
-			System.out.println("The product of the numbers is " +(a*b));
+			System.out.println("The product of the numbers is " + (a * b));
 		}
 
 
@@ -99,12 +97,10 @@
 			}
 			else {
 
-				System.out.println("The product of the numbers is " +(a/b));
+				System.out.println("The product of the numbers is " + (a / b));
 			}
 		}
 		
-
-
 		public static void exponent(int one, int two){
 			int result = 1;
 			for(int i = 0 ; i< two ; i++){
@@ -119,16 +115,16 @@
 
 			do{
 				check = result;
-				result = (check + ( a /check)) /2;
+				result = (check + ( a / check)) /2;
 
 			}
-			   while((check- result)!=0);
+			   while((check- result) != 0);
 
-			System.out.println(result);
+			System.out.println("The square root of " + a + " is " + result);
 		}
 
 		public static void average(int a, int b){
-			float answer = (float)a+(((float)b-(float)a)/2) ;
+			float answer = (float)a + (((float)b - (float)a) / 2) ;
 
 			System.out.println("The average of the numbers is " + answer);
 		}
