@@ -1,5 +1,3 @@
-//This program converts figures to words. created by MEGYEWODI
-
 import java.util.Scanner;
 public class FigureInWords {
     
@@ -9,14 +7,14 @@ public class FigureInWords {
 	static String []twoFigure = new String[]{"twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"};  
 
 	public static void main(String [] args){
-		System.out.println("\n            WELCOME TO MY FIGURE TO WORDS CONVERTER ");
+		System.out.println("\n WELCOME TO MY FIGURE TO WORDS CONVERTER ");
 		prompt();
 	}
 
     public static void prompt(){
          System.out.print("Enter a number to convert to words (or 'done' to quit):");
          Scanner inp = new Scanner(System.in);
-         check(inp.nextLine());
+         check(inp.nextLine().trim());
          System.out.println(convert(figAmount));
          prompt();     
     }
@@ -31,21 +29,21 @@ public class FigureInWords {
             catch(NumberFormatException err){
                 exit("You entered a wrong value");
             }
-         if(figAmount < 0){
+         	if(figAmount < 0){
                System.out.print("Negative ");
-               figAmount = Math.abs(figAmount); 
+               figAmount = (-figAmount); 
                }
-            
-        }
+             }
     }
 
    private static String convert(int value){ 
-   if(within(value, 0, 19)){
+      if(within(value, 0, 19)){
       		return below20[value];
-		}else if((value >= 20) && (value <= 90) && (value %10 == 0)){
-      		return twoFigure[(value / 10) - 2];
-		}
-      	else if(within(value,20,99)){
+		} 
+		else if(within(value,20,99)){
+      		if( value % 10 == 0){
+      			return twoFigure[(value / 10 ) -2];
+      		}
 	      int bin = (value  / 10) * 10;
 	      int uni = value  %  10;
 	      return convert(bin) + "-" + convert(uni);
