@@ -17,6 +17,7 @@
 			}
 
 			if (sign == 7){
+				return;
 				System.out.println("Enter your number");
 				int chi = inp.nextInt();
 				squareRoot(chi);
